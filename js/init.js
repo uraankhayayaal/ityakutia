@@ -9,7 +9,7 @@ anime.timeline({loop: true})
       translateZ: 0,
       duration: 750,
       delay: function(el, i) {
-        return 50 * i;
+        return 3000 + 50 * i;
       }
     }).add({
       targets: '.ml6',
@@ -22,24 +22,20 @@ anime.timeline({loop: true})
 anime.timeline({loop: true})
     .add({
         targets: '.logo',
-        scale: 0,
-        duration: 1,
-    }).add({
-        targets: '.logo',
-        loop: true,
         rotate: '1turn',
         scale: 1,
         duration: 5000,
+    })
+    .add({
+        targets: '.logo',
+        scale: 0,
+        duration: 1000,
     });
 anime.timeline({loop: true})
     .add({
         targets: '.logo img',
-        scale: 0,
-        duration: 1,
-    }).add({
-        targets: '.logo img',
         loop: true,
         rotate: '1turn',
-        scale: 1,
         duration: 5000,
+        endDelay: 1000,
     });
