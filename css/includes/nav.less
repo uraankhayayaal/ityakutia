@@ -1,1 +1,19 @@
 // main: ../styles.less
+
+nav{
+    .navbar-nav{
+        .nav-item{
+            .nav-link{
+                color: @primaryColor;
+                &:hover, &:focus{
+                    color: @brandColor;
+                }
+            }
+            &.active{
+                .nav-link{
+                    color: @brandColor;
+                }
+            }
+        }
+    }
+}
